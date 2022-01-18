@@ -1,0 +1,15 @@
+version: "3"
+services:
+  pt:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8888:8888"
+    # environment:
+    #   - JUPYTER_ENABLE_LAB=yes
+    volumes:
+      - /home/xiang/pt/workspace:/workspace
+      - /home/xiang/.ssh:/root/.ssh
+      - /home/xiang/.gitconfig:/root/.gitconfig
+    command: jupyter lab --allow-root
