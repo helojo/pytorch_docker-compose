@@ -9,7 +9,7 @@ services:
     # environment:
     #   - JUPYTER_ENABLE_LAB=yes
     volumes:
-      - /home/xiang/pt/workspace:/workspace
-      - /home/xiang/.ssh:/root/.ssh
-      - /home/xiang/.gitconfig:/root/.gitconfig
+      - ./workspace:/workspace
+      - ~/.ssh:/root/.ssh
+      - ~/.gitconfig:/root/.gitconfig
     command: jupyter lab --allow-root
